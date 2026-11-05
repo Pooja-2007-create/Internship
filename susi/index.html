@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sushi Bar Poster</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --wine: #911b40;
+      --wine-dark: #761332;
+      --cream: #fffaf0;
+      --pink: #f3d9d5; 
+      --ink: #30272a;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: #e1ec64;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .poster {
+      width: min(86vw, 680px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4%;
+      align-items: stretch;
+    }
+
+    .panel {
+      position: relative;
+      aspect-ratio: 0.476;
+      overflow: hidden;
+      container-type: inline-size;
+      background-color: var(--cream);
+      box-shadow: 4px 6px 9px rgba(129, 91, 44, 0.35);
+    }
+
+    .panel::before {
+     content: "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀";
+      position: absolute;
+      z-index: 0;
+      left: -7%;
+      top: 24%;
+      width: 120%;
+      color: var(--pink);
+      font-size: 7cqw;
+      letter-spacing: 3cqw;
+      opacity: .8;
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .panel::after {
+     content: "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀";
+      position: absolute;
+      z-index: 0;
+      right: -15%;
+      top: 55%;
+      color: var(--pink);
+      font-size: 7cqw;
+      letter-spacing: 2cqw;
+      opacity: .75;
+      transform: rotate(14deg);
+      pointer-events: none;
+    }
+
+    .menu::after {
+      content: ""✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀\A"
+    "✿   ❀      ✿   ❀      ✿   ❀      ✿   ❀\A"
+    "❀      ✿   ❀      ✿      ❀   ✿      ❀";
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+      background: var(--wine);
+      clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
+    }
+    .cover { text-align: center; }
+
+    .cover-title {
+      position: relative;
+      z-index: 2;
+      margin-top: 16%;
+      color: var(--ink);
+      font-size: 14cqw;
+      font-weight: 900;
+      line-height: .9;
+      letter-spacing: .5cqw;
+      text-shadow: 1px 2px #e23b3b;
+    }
+
+    .cover-subtitle {
+      position: relative;
+      z-index: 2;
+      margin-top: 2%;
+      color: var(--wine);
+      font-size: 7cqw;
+      font-weight: 900;
+      letter-spacing: .4cqw;
+    }
+
+    .ribbon {
+      position: relative;
+      z-index: 3;
+      width: 85%;
+      margin: 4% auto 0;
+      padding: 3% 2%;
+      background: var(--wine);
+      color: white;
+      font-size: 4.2cqw;
+      font-weight: 800;
+      letter-spacing: .1cqw;
+      clip-path: polygon(0 12%, 100% 0, 94% 50%, 100% 100%, 0 84%, 7% 50%);
+      transform: rotate(-2deg);
+    }
+
+    .cover-art {
+      position: absolute;
+      z-index: 2;
+      top: 33%;
+      left: 3%;
+      width: 94%;
+      height: 43%;
+    }
+
+    .cover-footer {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      padding-bottom: 6%;
+      background: var(--wine);
+      color: white;
+      font-size: 4cqw;
+      font-weight: 700;
+      clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
+    }
+
+
+    .menu-header {
+      position: absolute;
+      z-index: 2;
+      top: 4%;
+      left: 5%;
+      width: 90%;
+      text-align: center;
+    }
+
+    .menu-header h1 {
+      color: var(--ink);
+      font-size: 9cqw;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .menu-header p {
+      margin-top: 1%;
+      color: var(--wine);
+      font-size: 4.5cqw;
+      font-weight: 800;
+    }
+
+    .seal {
+      position: absolute;
+      z-index: 1;
+      top: 3%;
+      right: 6%;
+      width: 12%;
+      aspect-ratio: 1;
+      border: 1px solid #dd5c6f;
+      border-radius: 50%;
+      color: #d896a5;
+      font-size: 6cqw;
+      line-height: 1.7;
+    }
+    
+    .upper-menu {
+      position: absolute;
+      z-index: 2;
+      top: 19%;
+      left: 0;
+      width: 100%;
+      height: 45%;
+      padding: 0 6%;
+      overflow: hidden;
+      background: var(--wine);
+      color: white;
+    }
+
+    .section-title {
+      margin: 0 -7% 3%;
+      padding: 3% 2%;
+      background: var(--wine-dark);
+      color: white;
+      text-align: center;
+      font-size: 4.8cqw;
+      font-weight: 800;
+      letter-spacing: .15cqw;
+    }
+
+    .upper-menu .section-title { background: #772841; }
+
+    .dish-list {
+      position: relative;
+      z-index: 2;
+      width: 66%;
+    }
+
+    .dish {
+      display: flex;
+      justify-content: space-between;
+      gap: 2%;
+      padding: 2.4% 0;
+      border-bottom: 1px dotted rgb(255 255 255 / 55%);
+      font-size: 3.25cqw;
+      line-height: 1.15;
+    }
+
+    .dish strong {
+      display: block;
+      font-size: 3.5cqw;
+      letter-spacing: .02cqw;
+    }
+
+    .dish small {
+      display: block;
+      margin-top: 1%;
+      opacity: .85;
+      font-size: 2.8cqw;
+    }
+
+    .dish b { flex: 0 0 auto; }
+
+    .upper-art {
+      position: absolute;
+      z-index: 1;
+      right: -13%;
+      top: 15%;
+      width: 52%;
+      height: 85%;
+    }
+    .seal::before {
+      content: "✿";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      font-size: 6cqw;
+      color: #e9ada4;
+    }
+    .lower-menu {
+      position: absolute;
+      z-index: 2;
+      top: 64%;
+      left: 0;
+      width: 100%;
+      height: 36%;
+      padding: 0 6%;
+      overflow: hidden;
+      background: #fffdf7;
+    }
+
+    .lower-menu .section-title {
+      margin-bottom: 2%;
+      background: var(--wine);
+    }
+
+    .lower-art {
+      position: absolute;
+      left: -8%;
+      bottom: -3%;
+      width: 46%;
+      height: 73%;
+    }
+
+    .lower-menu .dish-list {
+      width: 60%;
+      margin-left: 39%;
+    }
+
+    .lower-menu .dish {
+      padding: 1.2% 0;
+      border-color: #b7aaa4;
+      color: #393033;
+      font-size: 2.65cqw;
+    }
+
+    .lower-menu .dish strong { font-size: 2.9cqw; }
+    .lower-menu .dish small { font-size: 2.25cqw; color: #777; }
+    .lower-menu .dish b { color: var(--wine); }
+
+    @media (max-width: 380px) {
+      .poster { width: 90vw; gap: 3%; }
+      .dish-list { width: 70%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster" aria-label="Sushi bar poster and menu">
+    <section class="panel cover" aria-label="Sushi bar poster">
+      <div class="cover-title">SUSHI</div>
+      <div class="cover-subtitle">SPOT</div>
+      <div class="ribbon">JAPANESE FOOD</div>
+
+    
+      <svg class="cover-art" viewBox="0 0 300 260" role="img" aria-label="Sushi rolls and chopsticks">
+        <g transform="rotate(-35 231 78)">
+          <rect x="213" y="66" width="38" height="24" rx="12" fill="#fff" stroke="#4b3732" stroke-width="4"/>
+          <rect x="220" y="70" width="24" height="16" rx="8" fill="#ef765f"/>
+          <path d="M222 79 Q232 69 242 80 Q235 87 224 82Z" fill="#f6a142" stroke="#864735" stroke-width="2"/>
+          <circle cx="229" cy="77" r="2" fill="#6b9b48"/>
+        </g>
+        <g transform="rotate(-35 185 70)" stroke="#49312b" stroke-width="5" stroke-linecap="round">
+          <path d="M190 22 L287 2" stroke="#b88746" stroke-width="8"/>
+          <path d="M198 37 L295 18" stroke="#d3a657" stroke-width="8"/>
+        </g>
+        <g transform="rotate(-28 120 135)">
+          <rect x="77" y="111" width="84" height="58" rx="16" fill="#fff" stroke="#4b3732" stroke-width="6"/>
+          <rect x="88" y="121" width="61" height="38" rx="12" fill="#ef765f"/>
+          <path d="M95 143 Q118 116 143 145 Q126 164 101 151Z" fill="#f6a142" stroke="#864735" stroke-width="4"/>
+          <circle cx="111" cy="139" r="5" fill="#6b9b48"/>
+          <circle cx="130" cy="148" r="5" fill="#6b9b48"/>
+        </g>
+        <g transform="rotate(28 43 198)">
+          <path d="M-5 186 Q35 150 82 188 L72 221 Q28 240 -7 216Z" fill="#f77c64" stroke="#5d3831" stroke-width="6"/>
+          <path d="M5 190 Q34 173 68 191" fill="none" stroke="#fff2df" stroke-width="9"/>
+          <path d="M-1 207 Q35 187 78 205" fill="none" stroke="#df5147" stroke-width="6"/>
+        </g>
+        <g transform="rotate(-18 210 203)">
+          <rect x="173" y="171" width="67" height="62" rx="18" fill="#24262a" stroke="#4d3934" stroke-width="5"/>
+          <path d="M182 178 Q207 161 231 179 L233 196 Q208 208 180 195Z" fill="#f7c54a"/>
+          <rect x="185" y="197" width="39" height="24" rx="8" fill="#fff"/>
+        </g>
+        <g transform="translate(234 138)">
+          <path d="M0 22 Q12 -2 39 5 Q64 12 55 38 Q45 61 19 54 Q-5 48 0 22Z" fill="#fff" stroke="#473731" stroke-width="5"/>
+          <circle cx="27" cy="30" r="15" fill="#75a84e"/>
+          <circle cx="27" cy="30" r="7" fill="#f4d94c"/>
+        </g>
+      </svg>
+
+      <div class="cover-footer">WWW.YOURSUSHIBAR.COM</div>
+    </section>
+
+    <section class="panel menu" aria-label="Sushi menu">
+      <div class="menu-header">
+        <h1>SUSHI</h1>
+        <p>MENU</p>
+      </div>
+      <div class="seal" aria-hidden="true"></div>
+
+      <div class="upper-menu">
+        <div class="section-title">SIGNATURE ROLLS</div>
+        <div class="dish-list">
+          <div class="dish"><span><strong>CALIFORNIA ROLL</strong><small>Crab, avocado &amp; cucumber</small></span><b>Rs.120</b></div>
+          <div class="dish"><span><strong>SALMON SUSHI</strong><small>Fresh salmon with rice</small></span><b>Rs.150</b></div>
+          <div class="dish"><span><strong>TUNA ROLL</strong><small>Tuna and special sauce</small></span><b>Rs.140</b></div>
+          <div class="dish"><span><strong>SHRIMP TEMPURA</strong><small>Crispy shrimp roll</small></span><b>Rs.160</b></div>
+          <div class="dish"><span><strong>HOUSE SPECIAL</strong><small>Chef's favorite roll</small></span><b>Rs.180</b></div>
+        </div>
+
+        <svg class="upper-art" viewBox="0 0 180 260" role="img" aria-label="Illustration of sushi rolls">
+          <g transform="rotate(-23 100 130)">
+            <path d="M76 22 Q129 2 157 39 L163 101 Q136 127 84 108 Q62 79 76 22Z" fill="#1f2326" stroke="#f7e8ce" stroke-width="6"/>
+            <path d="M79 38 Q113 20 153 43 L156 65 Q117 82 76 63Z" fill="#f7a94c"/>
+            <path d="M74 66 Q118 84 159 67 L161 88 Q118 110 79 91Z" fill="#e65c47"/>
+            <path d="M90 105 L128 104 L150 240 L108 246Z" fill="#fff8e9" stroke="#51413a" stroke-width="6"/>
+            <path d="M98 123 L134 122 L140 157 L101 160Z" fill="#e9a34b"/>
+            <path d="M102 175 L143 172 L148 208 L107 211Z" fill="#f27258"/>
+          </g>
+          <circle cx="140" cy="136" r="21" fill="#fff8e9" stroke="#51413a" stroke-width="5"/>
+          <circle cx="140" cy="136" r="12" fill="#7ba64c"/>
+          <circle cx="140" cy="136" r="5" fill="#f5d448"/>
+        </svg>
+      </div>
+
+        <div class="lower-menu">
+        <div class="section-title">CLASSIC FAVORITES</div>
+        <svg class="lower-art" viewBox="0 0 180 180" role="img" aria-label="Illustration of sushi rolls">
+          <g transform="rotate(-28 85 88)">
+            <rect x="24" y="26" width="96" height="55" rx="18" fill="#f3d49a" stroke="#4e3931" stroke-width="6"/>
+            <rect x="39" y="37" width="66" height="34" rx="12" fill="#8b4e35"/>
+            <circle cx="70" cy="54" r="14" fill="#f1d34c"/>
+            <circle cx="70" cy="54" r="7" fill="#71a14a"/>
+            <rect x="54" y="88" width="95" height="58" rx="20" fill="#fff8e9" stroke="#4e3931" stroke-width="6"/>
+            <rect x="67" y="100" width="68" height="33" rx="12" fill="#f0785d"/>
+            <path d="M75 118 Q99 94 128 119 Q108 142 78 127Z" fill="#f1c74c"/>
+          </g>
+        </svg>
+        <svg class="lower-art" viewBox="0 0 180 180" role="img" aria-label="Illustration of sushi rolls">
+          <g transform="rotate(-28 85 88)">
+            <rect x="24" y="26" width="96" height="55" rx="18" fill="#f3d49a" stroke="#4e3931" stroke-width="6"/>
+            <rect x="39" y="37" width="66" height="34" rx="12" fill="#8b4e35"/>
+            <circle cx="70" cy="54" r="14" fill="#f1d34c"/>
+            <circle cx="70" cy="54" r="7" fill="#71a14a"/>
+            <rect x="54" y="88" width="95" height="58" rx="20" fill="#fff8e9" stroke="#4e3931" stroke-width="6"/>
+            <rect x="67" y="100" width="68" height="33" rx="12" fill="#f0785d"/>
+            <path d="M75 118 Q99 94 128 119 Q108 142 78 127Z" fill="#f1c74c"/>
+          </g>
+
+        </svg>
+        <div class="dish-list">
+          <div class="dish"><span><strong>DRAGON ROLL</strong><small>Avocado and shrimp</small></span><b>Rs.170</b></div>
+          <div class="dish"><span><strong>SPICY SALMON</strong><small>Salmon with spicy mayo</small></span><b>Rs.160</b></div>
+          <div class="dish"><span><strong>VEGGIE ROLL</strong><small>Fresh seasonal vegetables</small></span><b>Rs.100</b></div>
+          <div class="dish"><span><strong>EEL NIGIRI</strong><small>Sweet soy-glazed eel</small></span><b>Rs.140</b></div>
+          <div class="dish"><span><strong>AVOCADO MAKI</strong><small>Avocado &amp; cucumber</small></span><b>Rs.100</b></div>
+        </div>
+      </div>
+      <div class="seal" aria-hidden="true"></div>
+    </section>
+  </main>
+</body>
+</html>
