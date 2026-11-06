@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPFO Member Passbook</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .passbook {
+            width: 610px;
+            margin: auto;
+            padding: 15px;
+            border: 2px solid #ddd;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            border-bottom: 1px solid #999;
+            padding-bottom: 15px;
+        }
+        .logo {
+            width: 75px;
+            height: 70px;
+            border: 2px solid #555;
+            border-radius: 50%;
+            margin-left:20px;
+            margin-right:1px;
+        }
+        .header-title {
+            flex: 1;
+        }
+
+        .header-title h2 {
+            font-size: 20px;
+            color: #243d73;
+            margin: 0;
+        }
+
+        .header-title h3 {
+            font-size: 13px;
+            color: #243d73;
+            margin: 3px 0;
+        }
+
+        .header-title p {
+            font-size: 9px;
+            margin: 0;
+        }
+
+        .right-logo {
+            width:75px;
+            height:80px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .title {
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+        .member-details {
+            font-size: 10px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+        .member-details div {
+            display: flex;
+        }
+        .member-details span:first-child {
+            width: 150px;
+        }
+        .member-details span:last-child {
+            font-weight: bold;
+        }
+        .financial-year {
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9px;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px 3px;
+        }
+        th {
+            font-weight: bold;
+            background-color: #f5f5f5;
+        }
+        .left {
+            text-align: left;
+        }
+        .section-heading {
+            font-weight: bold;
+            background-color: white;
+        }
+        .total {
+            font-weight: bold;
+        }
+        .withdrawal {
+            color: red;
+            font-weight: bold;
+        }
+        .closing {
+            font-weight: bold;
+            border-top: 2px solid black;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            margin-top: 30px;
+        } 
+    </style>
+</head>
+<body>
+<div class="passbook">
+    <div class="header">
+
+        <div>
+            <img src="https://pnggallery.com/wp-content/uploads/epfo-logo-01.png" class="logo">
+        </div>
+
+        <div class="header-title">
+            <h2>EMPLOYEES' PROVIDENT FUND ORGANISATION</h2>
+            <h3>EMPLOYEES' PROVIDENT FUND ORGANISATION</h3>
+            <p>(Ministry of Labour & Employment, Govt. of India)</p>
+        </div>
+
+        <div>
+            <img src="https://tse4.mm.bing.net/th/id/OIP.ssNOoJWpHm9GR-gtOppKbwAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" class="right-logo">
+        </div>
+
+    </div>
+
+
+    <div class="title">
+        Member Passbook
+    </div>
+    <div class="member-details">
+
+        <div>
+            <span>Establishment ID/Name</span>
+            <span>: __________________________</span>
+        </div>
+
+        <div>
+            <span>Member ID/Name</span>
+            <span>: __________________________</span>
+        </div>
+
+        <div>
+            <span>Date of Birth</span>
+            <span>: 16-01-2005</span>
+        </div>
+
+        <div>
+            <span>UAN</span>
+            <span>: __________________________</span>
+        </div>
+
+    </div>
+    <div class="financial-year">
+        EPF Passbook | Financial Year - 2026-2027
+    </div>
+
+
+    <table>
+
+        <tr>
+            <th colspan="6" class="left">Particulars</th>
+            <th>Employee Balance</th>
+            <th>Employer Balance</th>
+            <th>Pension Balance</th>
+        </tr>
+
+        <tr>
+            <td colspan="6" class="left">
+                OB Int. Updated upto 01/04/2026
+            </td>
+            <td>1,10,337</td>
+            <td>32,949</td>
+            <td>53,750</td>
+        </tr>
+
+        <tr class="section-heading">
+            <th>Wage Month</th>
+            <th colspan="3">Transaction</th>
+            <th colspan="2">Wages</th>
+            <th colspan="3">Contribution</th>
+        </tr>
+
+        <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th colspan="2">Particulars</th>
+            <th>EPF</th>
+            <th>EPS</th>
+            <th>Employee</th>
+            <th>Employer</th>
+            <th>Pension</th>
+        </tr>
+
+        <tr>
+            <td>Mar-2026</td>
+            <td>13-04-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 042026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>1,250</td>
+        </tr>
+
+        <tr>
+            <td>Apr-2026</td>
+            <td>12-05-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 052026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>2134</td>
+        </tr>
+
+        <tr>
+            <td>May-2026</td>
+            <td>12-06-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 062026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>1,250</td>
+        </tr>
+        <tr>
+            <td>Jun-2026</td>
+            <td>12-07-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 072026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>1,250</td>
+        </tr>
+        <tr>
+            <td>Jul-2026</td>
+            <td>11-08-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 082026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>1,250</td>
+        </tr>
+        <tr>
+            <td>Aug-2026</td>
+            <td>13-09-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 092026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>1,250</td>
+        </tr>
+        <tr>
+            <td>Sep-2026</td>
+            <td>13-10-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 102026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>1,250</td>
+        </tr>
+        <tr>
+            <td>Oct-2026</td>
+            <td>10-11-2026</td>
+            <td>CR</td>
+            <td class="left">Cont. For Due-Month 112026</td>
+            <td>15,000</td>
+            <td>15,000</td>
+            <td>1,800</td>
+            <td>550</td>
+            <td>1,250</td>
+        </tr>
+        <tr class="total">
+            <td colspan="6" class="left">
+                Total Contributions for the year [2026]
+            </td>
+            <td>14,400</td>
+            <td>4,400</td>
+            <td>10,000</td>
+        </tr>
+        <tr class="total">
+            <td colspan="6" class="left">
+                Total Transfer-In/Withdrawals for the year [2026]
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr class="withdrawal">
+            <td colspan="6" class="left">
+                Total Withdrawals for the year [2026]
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td colspan="6" class="left">
+                Interest details N/A
+            </td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr class="closing">
+            <td colspan="6" class="left">
+                Closing Balance as on 31/03/2027
+            </td>
+            <td>1,24,737</td>
+            <td>37,349</td>
+            <td>63,750</td>
+        </tr>
+    </table>
+    <div class="footer">
+        <span>End Of Statement</span>
+        <span>Printed On: 12-12-2026 11:31:54</span>
+    </div>
+</div>
+</body>
+</html>
