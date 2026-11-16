@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweetify | Product Details</title>
+
+    <script src="auth.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img class="brand-mark" src="images/sweetify-mark.svg" alt="">
+            SWEETIFY<span>.</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="index.html#products">Our Sweets</a>
+            <a href="index.html#story">Our Story</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <a href="index.html" class="back-shop">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Shop
+        </a>
+
+    </header>
+
+
+    <!-- PRODUCT DETAILS SECTION -->
+
+    <section class="product-details">
+
+        <!-- PRODUCT IMAGE -->
+
+        <div class="product-gallery">
+
+            <img id="product-image"
+                src=""
+                alt="Sweetify Product">
+
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+
+        <div class="product-information">
+
+            <p class="breadcrumb">
+                Home / Our Sweets / Product
+            </p>
+
+            <span class="product-label">
+                SWEETIFY SPECIAL
+            </span>
+
+            <h1 id="product-name"></h1>
+
+            <!-- RATINGS -->
+
+            <div class="product-rating">
+
+                <span>★★★★★</span>
+
+                <small id="product-rating"></small>
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <h2 id="product-price"></h2>
+
+
+            <!-- DESCRIPTION -->
+
+            <p id="product-description"></p>
+
+
+            <!-- INGREDIENTS -->
+
+            <div class="product-ingredients">
+
+                <h3>Our Ingredients</h3>
+
+                <p id="product-ingredients"></p>
+
+            </div>
+
+
+            <!-- WEIGHT SELECTION -->
+
+            <div class="detail-weight">
+
+                <label>Select Weight</label>
+
+                <select id="detail-weight">
+
+                    <option value="250">250g</option>
+                    <option value="500">500g</option>
+                    <option value="1000">1kg</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="detail-quantity">
+
+                <label>Quantity</label>
+
+                <div class="quantity-box">
+
+                    <button id="decrease">−</button>
+
+                    <span id="quantity">1</span>
+
+                    <button id="increase">+</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD TO CART -->
+
+            <button id="detail-add-cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                ADD TO CART
+
+            </button>
+
+
+            <!-- BENEFITS -->
+
+            <div class="product-benefits">
+
+                <p>
+                    <i class="fa-solid fa-truck"></i>
+                    Freshly prepared sweets
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-heart"></i>
+                    Made with love and care
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-box"></i>
+                    Carefully packed
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="product-footer">
+
+        <h2>
+            <img class="brand-mark" src="images/sweetify-mark.svg" alt="">
+            SWEETIFY<span>.</span>
+        </h2>
+
+        <p>Tradition • Taste • Happiness</p>
+
+        <p>© 2026 Sweetify. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="regional-sweets.js"></script>
+    <script src="product.js"></script>
+
+</body>
+
+</html>

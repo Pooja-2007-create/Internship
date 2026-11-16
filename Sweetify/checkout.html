@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Sweetify</title>
+
+    <script src="auth.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img class="brand-mark" src="images/sweetify-mark.svg" alt="">
+            SWEETIFY<span>.</span>
+        </div>
+
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i> Continue Shopping
+        </a>
+        <a href="track-order.html" class="back-home">Track Order</a>
+        <a href="admin-payment.html" class="back-home">Admin Verify</a>
+    </nav>
+
+
+    <!-- CHECKOUT HEADER -->
+    <section class="checkout-header">
+        <h1>Complete Your Order</h1>
+        <p>Just a few details before your sweets reach your doorstep.</p>
+    </section>
+
+
+    <!-- CHECKOUT SECTION -->
+    <main class="checkout-container">
+
+        <!-- CUSTOMER DETAILS -->
+        <section class="checkout-details">
+
+            <h2>Delivery Information</h2>
+
+            <form id="checkout-form">
+
+                <div class="form-group">
+                    <label for="customer-name">Full Name</label>
+                    <input type="text" id="customer-name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="customer-phone">Mobile Number</label>
+                        <input type="tel" id="customer-phone"
+                               placeholder="Enter mobile number"
+                               pattern="[0-9]{10}" maxlength="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-email">Email Address</label>
+                        <input type="email" id="customer-email"
+                               placeholder="Enter your email" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-address">Full Address</label>
+                    <textarea id="customer-address"
+                              placeholder="House number, street, area..."
+                              required></textarea>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="customer-city">City</label>
+                        <input type="text" id="customer-city"
+                               placeholder="Enter city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-pincode">Pincode</label>
+                        <input type="text" id="customer-pincode"
+                               placeholder="6-digit pincode"
+                               pattern="[0-9]{6}" maxlength="6" required>
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT METHOD -->
+                <h2 class="payment-heading">Payment Method</h2>
+
+                <div class="payment-option">
+
+                    <label>
+                        <input type="radio" name="payment"
+                               value="Cash on Delivery" checked>
+
+                        <span>
+                            <i class="fas fa-money-bill-wave"></i>
+                            Cash on Delivery
+                        </span>
+                    </label>
+
+                </div>
+
+                <div class="payment-option">
+
+                    <label>
+                        <input type="radio" name="payment"
+                               value="Pay via UPI">
+
+                        <span>
+                            <i class="fas fa-mobile-screen"></i>
+                            Pay via UPI
+                        </span>
+                    </label>
+
+                    <p class="payment-note">
+                        Scan the order QR with Google Pay, PhonePe or Paytm. Payment stays pending until an admin verifies it.
+                    </p>
+
+                </div>
+
+                <div class="payment-option">
+
+                    <label>
+                        <input type="radio" name="payment"
+                               value="Pay via WhatsApp">
+
+                        <span>
+                            <i class="fab fa-whatsapp"></i>
+                            Pay via WhatsApp
+                        </span>
+                    </label>
+
+                    <p class="payment-note">
+                        Coordinate your UPI payment in WhatsApp. Your order stays pending until payment is verified.
+                    </p>
+
+                </div>
+
+                <button type="submit" class="place-order-btn">
+                    Place Order <i class="fas fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+        <section class="order-summary">
+
+            <h2>Your Order</h2>
+
+            <div id="checkout-items">
+                <!-- Products will be displayed here using JavaScript -->
+            </div>
+
+            <div class="summary-total">
+                <span>Total Amount</span>
+                <strong id="checkout-total">₹0</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ORDER CONFIRMATION -->
+    <div id="success-overlay" class="success-overlay">
+
+        <div class="success-box">
+
+            <i class="fas fa-circle-check"></i>
+
+            <h2>Order Placed Successfully!</h2>
+
+            <p id="success-message">
+                Thank you for shopping with Sweetify.
+            </p>
+
+            <button onclick="window.location.href='index.html'">
+                Back to Home
+            </button>
+            <a id="track-order-link" class="track-order-link" href="track-order.html">
+                Track Order
+            </a>
+            <a id="whatsapp-order-link" class="whatsapp-order-link" href="#" target="_blank" rel="noopener" hidden>
+                Continue in WhatsApp
+            </a>
+            <section id="upi-payment-details" class="upi-payment-details" hidden aria-live="polite">
+                <h3>Pay with your UPI app</h3>
+                <img id="upi-qr-code" class="upi-qr-code" alt="UPI payment QR code">
+                <p>UPI ID: <strong id="upi-id-value"></strong></p>
+                <p>Amount: <strong id="upi-amount-value"></strong></p>
+                <a id="upi-app-link" class="upi-app-link" href="#">Open a UPI app</a>
+                <p class="payment-note">After paying, submit the transaction reference below. This does not mark the order as paid.</p>
+                <form id="upi-reference-form" class="upi-reference-form">
+                    <label for="upi-transaction-reference">UPI transaction reference</label>
+                    <input id="upi-transaction-reference" type="text" maxlength="100" required
+                           placeholder="Enter the UTR or transaction ID">
+                    <button type="submit">Submit reference</button>
+                </form>
+                <p id="upi-reference-message" class="upi-reference-message" role="status" aria-live="polite"></p>
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+</html>

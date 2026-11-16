@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweetify | Premium Indian Sweets</title>
+
+    <script src="auth.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+
+        <nav class="navbar home-navbar">
+
+            <a href="#home" class="logo">
+                <img class="brand-mark" src="images/sweetify-mark.svg" alt="">
+                SWEETIFY<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Our Sweets</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="track-order.html">Track Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <button class="cart-btn" id="cart-btn">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                Cart
+
+                <span id="cart-count">0</span>
+
+            </button>
+
+            <a class="sign-in-link" href="signin.html">Sign In</a>
+
+        </nav>
+
+    </header>
+        <!-- SWEETIFY VIDEO SECTION -->
+
+<section class="video-section">
+
+    <div class="video-heading">
+        <span>MADE WITH LOVE</span>
+        <h2>A Little Taste of Tradition</h2>
+        <p>At Sweetify, we believe every sweet carries a beautiful story of tradition, love and happiness. From our delicious Motichoor Laddus to rich, melt-in-your-mouth Gulab Jamuns, every treat celebrates the authentic flavours of India. Crafted with care and inspired by timeless recipes, we bring you the perfect sweetness for every occasion. Because every celebration deserves a little more sweetness!</p>
+    </div>
+
+    <div class="video-container">
+
+        <video autoplay muted loop playsinline poster="images/hero.jpg">
+
+            <source src="images/sweetify-video.mp4" type="video/mp4">
+
+            Your browser does not support video playback.
+
+        </video>
+
+    </div>
+
+</section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories section-padding" id="categories">
+
+        <div class="section-heading">
+
+            <p>EXPLORE OUR COLLECTION</p>
+
+            <h2>Sweet Categories</h2>
+
+            <span>Discover something delicious for every occasion.</span>
+
+        </div>
+
+        <div class="category-container">
+
+            <button class="category-card" data-category="Traditional">
+
+                <span>01</span>
+
+                <h3>Traditional Sweets</h3>
+
+                <p>Timeless Indian flavours</p>
+
+            </button>
+
+            <button class="category-card" data-category="Milk">
+
+                <span>02</span>
+
+                <h3>Milk Sweets</h3>
+
+                <p>Rich and creamy delights</p>
+
+            </button>
+
+            <button class="category-card" data-category="Special">
+
+                <span>03</span>
+
+                <h3>Special Sweets</h3>
+
+                <p>Made for celebrations</p>
+
+            </button>
+
+            <button class="category-card" data-category="All">
+
+                <span>04</span>
+
+                <h3>View All</h3>
+
+                <p>Explore every delight</p>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="products section-padding" id="products">
+
+        <div class="section-heading">
+
+            <p>HANDCRAFTED WITH LOVE</p>
+
+            <h2>Our Best Sellers</h2>
+
+            <span>Some of our most-loved sweet creations.</span>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="product-controls">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search your favourite sweets..."
+            >
+
+            <select id="filter-category">
+
+                <option value="All">All Categories</option>
+
+                <option value="Traditional">Traditional</option>
+
+                <option value="Milk">Milk Sweets</option>
+
+                <option value="Special">Special Sweets</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-container" id="product-container">
+
+            <!-- Products will be added using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT US -->
+
+    <section class="about section-padding" id="about">
+
+        <div class="about-image">
+
+            <img src="images/hero.jpg" alt="Sweetify traditional sweets">
+
+        </div>
+
+        <div class="about-content">
+
+            <p class="small-heading">OUR STORY</p>
+
+            <h2>Tradition Served With Love.</h2>
+
+            <p>
+
+                At Sweetify, we believe every sweet has a story.
+                Inspired by traditional Indian recipes, we bring
+                you authentic flavours crafted with care,
+                quality ingredients and passion.
+
+            </p>
+
+            <p>
+
+                From everyday celebrations to special occasions,
+                we make every moment a little sweeter.
+
+            </p>
+
+            <a href="sweets.html" class="primary-btn">
+
+                Discover Our Sweets
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT AND STORE LOCATION -->
+
+    <div class="contact-map-layout">
+
+    <section class="contact section-padding" id="contact">
+
+        <div class="section-heading">
+
+            <p>WE WOULD LOVE TO HEAR FROM YOU</p>
+
+            <h2>Get In Touch</h2>
+
+            <span>Have a question? Send us a message.</span>
+
+        </div>
+
+        <form id="contact-form">
+
+            <input
+                type="text"
+                id="customer-name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="customer-email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="tel"
+                id="customer-phone"
+                placeholder="Your Phone Number"
+                required
+            >
+
+            <textarea
+                id="customer-message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit" class="primary-btn">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="map-section">
+    <div class="map-heading">
+        <span>VISIT OUR STORE</span>
+        <h2>Find Our Sweet Spot</h2>
+        <p>We would love to welcome you! Visit us in Madurai.</p>
+    </div>
+
+    <div class="map-container">
+        <iframe
+            src="https://maps.google.com/maps?q=Sweetify%20Shop%20Madurai%20Tamil%20Nadu&z=14&output=embed"
+            width="100%"
+            height="400"
+            style="border:0; display:block;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Sweetify Shop location map">
+        </iframe>
+
+        <div class="map-pin-badge" aria-label="Sweetify shop location">
+            <span>Sweetify</span>
+        </div>
+    </div>
+    </section>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>
+                <img class="brand-mark" src="images/sweetify-mark.svg" alt="">
+                SWEETIFY<span>.</span>
+            </h2>
+
+            <p>Making every celebration a little sweeter.</p>
+
+            <div class="social-icons">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Sweetify. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+    <!-- SHOPPING CART -->
+
+    <div class="cart-overlay" id="cart-overlay">
+
+        <div class="cart-panel">
+
+            <div class="cart-header">
+
+                <h2>Your Shopping Bag</h2>
+
+                <button id="close-cart" aria-label="Close cart">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <div id="cart-items">
+
+                <p class="empty-cart">Your cart is empty.</p>
+
+            </div>
+
+            <div class="cart-footer">
+
+                <h3>
+                    Total: ₹<span id="cart-total">0</span>
+                </h3>
+
+                <button id="checkout-btn" class="primary-btn">
+                    Proceed to Checkout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

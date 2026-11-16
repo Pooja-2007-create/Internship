@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F7F1E8">
+    <title>Sign In | Sweetify</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="signin-page">
+    <header class="signin-header">
+        <a href="signin.html" class="logo">
+            <img class="brand-mark" src="images/sweetify-mark.svg" alt="">
+            SWEETIFY<span>.</span>
+        </a>
+    </header>
+
+    <main class="signin-main">
+        <section class="signin-card" aria-labelledby="signin-title">
+            <div class="signin-form-panel">
+                <p class="signin-eyebrow" id="signin-eyebrow">WELCOME BACK</p>
+                <h1 id="signin-title">A little sweetness awaits.</h1>
+                <p class="signin-intro" id="signin-intro">Sign in to pick up where your cravings left off.</p>
+
+                <form id="signin-form">
+                    <label for="signin-email">Email address</label>
+                    <div class="signin-input-wrap">
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        <input
+                            id="signin-email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <label for="signin-password">Password</label>
+                    <div class="signin-input-wrap">
+                        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                        <input
+                            id="signin-password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <button class="signin-submit" type="submit">
+                        <span id="signin-submit-label">Sign In</span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                    <p class="signin-mode-prompt">
+                        <span id="signin-mode-prompt">New to Sweetify?</span>
+                        <button id="toggle-auth-mode" type="button" aria-pressed="false">Create an account</button>
+                    </p>
+                </form>
+
+            </div>
+
+            <div class="signin-image-panel">
+                <img src="images/hero.jpg" alt="A selection of handcrafted Indian sweets">
+                <div class="signin-image-caption">
+                    <span>MADE WITH LOVE</span>
+                    <p>Tradition, taste, and a little joy in every bite.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="signin.js"></script>
+</body>
+</html>

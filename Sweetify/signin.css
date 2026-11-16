@@ -1,0 +1,224 @@
+.signin-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 8%;
+}
+
+.signin-main {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 30px 8% 70px;
+}
+
+.signin-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    width: min(100%, 1000px);
+    min-height: 570px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(15, 61, 62, 0.12);
+}
+
+.signin-form-panel {
+    align-self: center;
+    padding: clamp(32px, 6vw, 72px);
+}
+
+.signin-eyebrow,
+.signin-image-caption span {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.signin-form-panel h1 {
+    margin: 14px 0 12px;
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.15;
+}
+
+.signin-intro {
+    margin-bottom: 32px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+#signin-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signin-form label {
+    margin: 0 0 9px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.signin-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #FFFEFC;
+    color: var(--gold);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.signin-input-wrap:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(15, 61, 62, 0.1);
+}
+
+.signin-input-wrap input {
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.signin-input-wrap input::placeholder {
+    color: #9A9F98;
+}
+
+.signin-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.signin-submit:hover {
+    transform: translateY(-1px);
+    background: var(--primary-dark);
+}
+
+.signin-mode-prompt {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.signin-mode-prompt button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--primary);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.signin-mode-prompt button:hover {
+    text-decoration: underline;
+}
+
+.signin-image-panel {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    background: var(--primary);
+}
+
+.signin-image-panel::after {
+    position: absolute;
+    inset: 30% 0 0;
+    background: linear-gradient(transparent, rgba(10, 46, 47, 0.88));
+    content: "";
+}
+
+.signin-image-panel img {
+    width: 100%;
+    height: 100%;
+    min-height: 570px;
+    object-fit: cover;
+}
+
+.signin-image-caption {
+    position: absolute;
+    z-index: 1;
+    right: 32px;
+    bottom: 34px;
+    left: 32px;
+    color: white;
+}
+
+.signin-image-caption span {
+    color: #E5B28F;
+}
+
+.signin-image-caption p {
+    max-width: 320px;
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    line-height: 1.35;
+}
+
+@media (max-width: 700px) {
+    .signin-header {
+        padding: 18px 6%;
+    }
+
+    .signin-main {
+        padding: 18px 5% 40px;
+    }
+
+    .signin-card {
+        grid-template-columns: 1fr;
+    }
+
+    .signin-form-panel {
+        padding: 36px 28px;
+    }
+
+    .signin-image-panel {
+        min-height: 240px;
+    }
+
+    .signin-image-panel img {
+        min-height: 240px;
+        max-height: 280px;
+    }
+
+    .signin-image-caption {
+        right: 24px;
+        bottom: 22px;
+        left: 24px;
+    }
+
+    .signin-image-caption p {
+        font-size: 21px;
+    }
+}

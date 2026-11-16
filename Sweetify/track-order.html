@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F7F1E8">
+    <title>Track Your Order | Sweetify</title>
+
+    <script src="auth.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="track-order.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="track-order-page">
+    <header class="track-header">
+        <a href="index.html" class="logo">
+            <img class="brand-mark" src="images/sweetify-mark.svg" alt="">
+            SWEETIFY<span>.</span>
+        </a>
+        <a href="index.html" class="track-back-link">Back to shop</a>
+    </header>
+
+    <main class="track-main">
+        <section class="track-card" aria-labelledby="track-title">
+            <p class="track-eyebrow">SWEETIFY DELIVERY</p>
+            <h1 id="track-title">Track your order</h1>
+            <p class="track-intro">Enter your order ID to see its latest progress.</p>
+
+            <form id="track-order-form" class="track-form">
+                <label for="order-id-input">Order ID</label>
+                <div class="track-form-row">
+                    <input
+                        id="order-id-input"
+                        name="orderId"
+                        type="text"
+                        placeholder="For example, SW12345678"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit">Track Order</button>
+                </div>
+            </form>
+
+            <p id="track-message" class="track-message" role="status" aria-live="polite"></p>
+
+            <section id="order-result" class="order-result" aria-live="polite" hidden>
+                <div class="order-summary">
+                    <div>
+                        <span class="summary-label">Order</span>
+                        <h2 id="result-order-id"></h2>
+                    </div>
+                    <div class="summary-meta">
+                        <span id="result-order-date"></span>
+                        <strong id="result-order-total"></strong>
+                        <span id="result-payment-status" class="payment-status" hidden></span>
+                    </div>
+                </div>
+
+                <ol class="order-timeline" aria-label="Order progress">
+                    <li class="timeline-step completed">
+                        <span class="timeline-marker" aria-hidden="true">✓</span>
+                        <span class="timeline-label">Order Placed</span>
+                    </li>
+                    <li class="timeline-step completed">
+                        <span class="timeline-marker" aria-hidden="true">✓</span>
+                        <span class="timeline-label">Order Confirmed</span>
+                    </li>
+                    <li class="timeline-step current" aria-current="step">
+                        <span class="timeline-marker" aria-hidden="true">●</span>
+                        <span class="timeline-label">Preparing Your Sweets</span>
+                    </li>
+                    <li class="timeline-step pending">
+                        <span class="timeline-marker" aria-hidden="true">○</span>
+                        <span class="timeline-label">Out for Delivery</span>
+                    </li>
+                    <li class="timeline-step pending">
+                        <span class="timeline-marker" aria-hidden="true">○</span>
+                        <span class="timeline-label">Delivered</span>
+                    </li>
+                </ol>
+            </section>
+        </section>
+    </main>
+
+    <script src="track-order.js"></script>
+</body>
+</html>

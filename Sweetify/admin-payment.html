@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F7F1E8">
+    <title>Payment Verification | Sweetify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin-payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-payment-page">
+    <header class="admin-header">
+        <a href="index.html" class="admin-logo">SWEETIFY<span>.</span></a>
+        <a href="checkout.html" class="admin-back-link">Back to checkout</a>
+    </header>
+
+    <main class="admin-main">
+        <section class="admin-card">
+            <p class="admin-eyebrow">ADMIN</p>
+            <h1>Verify a payment</h1>
+            <p class="admin-intro">
+                Check the payment in your UPI app or bank before marking an order as Paid.
+                A submitted transaction reference is not proof of payment.
+            </p>
+
+            <form id="admin-order-lookup" class="admin-form">
+                <label for="admin-order-id">Order ID</label>
+                <div class="admin-form-row">
+                    <input id="admin-order-id" type="text" autocomplete="off" required>
+                    <button type="submit">Find order</button>
+                </div>
+            </form>
+
+            <p id="admin-message" class="admin-message" role="status" aria-live="polite"></p>
+
+            <section id="admin-order-details" class="admin-order-details" hidden>
+                <h2 id="admin-result-order-id"></h2>
+                <dl>
+                    <div><dt>Amount</dt><dd id="admin-result-total"></dd></div>
+                    <div><dt>Payment method</dt><dd id="admin-result-method"></dd></div>
+                    <div><dt>Status</dt><dd id="admin-result-status"></dd></div>
+                    <div><dt>Transaction reference</dt><dd id="admin-result-reference"></dd></div>
+                </dl>
+
+                <form id="admin-verify-form" class="admin-form">
+                    <label for="admin-transaction-reference">Transaction reference</label>
+                    <input id="admin-transaction-reference" type="text" maxlength="100"
+                           placeholder="Enter or confirm the UPI reference">
+                    <label for="admin-verification-key">Admin verification key</label>
+                    <input id="admin-verification-key" type="password" autocomplete="current-password" required>
+                    <button id="admin-verify-button" type="submit">Mark payment as verified</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <script src="admin-payment.js"></script>
+</body>
+</html>
